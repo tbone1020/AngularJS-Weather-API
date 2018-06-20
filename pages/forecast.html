@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <a href="#/">Back to Search</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Forecast Page</h1>
+            <p>Forecast for {{city}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1">
+            <a ng-class="{ 'bg-primary': days === '3'}" href="#/forecast/3">3 Days</a>
+        </div>
+        <div class="col-md-1">
+            <a ng-class="{ 'bg-primary': days === '5'}" href="#/forecast/5">5 Days</a>
+        </div>
+        <div class="col-md-1">
+            <a ng-class="{ 'bg-primary': days === '7'}" href="#/forecast/7">7 Days</a>
+        </div>
+        <div class="col-md-1">
+            <a ng-class="{ 'bg-primary': days === '10'}" href="#/forecast/10">10 Days</a>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-3 mb-4" ng-repeat="w in weatherResult.list">
+            <weather-report 
+            weather-day="w" 
+            convert-to-standard="convertToFahrenheit(dayTimeTemp)" 
+            convert-to-date="convertDate(dt)" 
+            date-format="EEEE, MMM d"></weather-report>
+        </div>
+    </div>
+</div>

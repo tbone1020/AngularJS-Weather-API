@@ -1,0 +1,7 @@
+<div class="card">
+    <h5 class="card-header">{{convertToDate({dt: weatherDay.dt}) | date: dateFormat}}</h5>
+    <div class="card-body">
+        <span class="card-text"> High: {{ convertToStandard({dayTimeTemp: weatherDay.main.temp_max}) }}°</span>
+        <span class="card-text pl-2"> Low: {{ convertToStandard({dayTimeTemp: weatherDay.main.temp_min}) }}°</span>
+    </div>
+</div> 
