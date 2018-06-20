@@ -1,0 +1,9 @@
+.cloud-bg {
+	background:url('images/clouds.jpg');
+	background-size: cover;
+	background-position: center;
+	padding: 200px 0;
+}
+.city-search {
+	color: white;
+}
